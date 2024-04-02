@@ -1,25 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="./img/Design sem nome (2).png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <title>IBS - Internet's best site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <section class="The-Title">
-        <h1>Welcome to the <span>WORLD'S</span> best site</h1>
+
+<body class="main-box">
+    <section class="Navbar">
+        <div>
+            <h2><span>I</span>BS - <span2> Internet's</span2> best site</h2>
+        </div>
+
+        <div>
+            <ul>
+                <li><a class="Link-Menu" id="click-app" href="#click">Click app</a></li>
+                <li><a class="Link-Menu" href="#todo">TODO app</a></li>
+                <li><a class="Link-Menu" href="#finance">Finance app</a></li>
+            </ul>
+        </div>
     </section>
 
-    <div id="div-counter">
-        <h3 id="counter">0</h3>
+    <div id="click">
+        <section class="The-Title">
+            <h1>Welcome to the <span>INTERNET'S</span> best site</h1>
+        </section>
+    
+        <section class="Click-Game-Title">
+            <h2>Click Game App</h2>
+        </section>
+    
+        <div id="div-counter">
+            <h3 id="counter">0</h3>
+        </div>
+    
+        <section class="Click-Me-Button-Section">
+            <button class="Click-Me-Button" onclick="increment()">CLICK ME</button>
+        </section>
     </div>
 
-    <section class="Click-Me-Button-Section">
-        <button class="Click-Me-Button" onclick="increment()">CLICK ME</button>
+    <section class="Todo-App">
+        <h2> To Do App</h2>
     </section>
 
     <script src="app.js" defer></script>
 </body>
+
 </html>
