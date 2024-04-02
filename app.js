@@ -2,6 +2,7 @@ var buttonClickCount = 0;
 var rainbowColors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 var rainbowIndex = 0;
 var rainbowInterval;
+var rainbowStarted = false;
 
 function increment() {
     var counterElement = document.getElementById('counter');
@@ -12,10 +13,13 @@ function increment() {
 
     if (buttonClickCount === 100) {
         startRainbowAnimation();
+    } else if (rainbowStarted) {
+        restartPage();
     }
 }
 
 function startRainbowAnimation() {
+    rainbowStarted = true;
     rainbowInterval = setInterval(function() {
         var counterElement = document.getElementById('counter');
         counterElement.style.color = rainbowColors[rainbowIndex];
@@ -23,8 +27,11 @@ function startRainbowAnimation() {
     }, 100);
 }
 
-// Evento de clique para o botão de dica
 const tipButton = document.querySelector('.tip');
 tipButton.addEventListener('click', function() {
     alert("Clique 100 vezes no botão e veja algo incrível acontecer.");
 });
+
+function restartPage() {
+    window.location.reload();
+}
